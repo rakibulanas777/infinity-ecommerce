@@ -7,7 +7,7 @@ function TrendingItem() {
   return (
     <>
       {filteredItems.map((item) => (
-        <div key={item.id} className="row-item">
+        <div key={item.id} className="bg-white w-full shadow-sm rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg  border p-4">
           <Link
             onClick={() => window.top(0, 0)}
             to={`/categories/product/${item.id}`}
