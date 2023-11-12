@@ -4,6 +4,7 @@ import LogoImg2 from "../img/logo.svg";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import CartWithItems from "./CartWithItems";
+import { FaUserAlt } from 'react-icons/fa';
 import EmptyCart from "./EmptyCart";
 import { CartContext } from "../pages/ProductPage";
 import { IconMenu2, IconShoppingCart, IconX } from "@tabler/icons-react";
@@ -103,6 +104,7 @@ function Navbar() {
               >
                 product page
               </Link>
+
               <i
                 data-array-length={cartItem.length}
                 onClick={openCart}
@@ -111,6 +113,12 @@ function Navbar() {
               >
                 <IconShoppingCart />
               </i>
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to="/login"
+              >
+                <FaUserAlt />
+              </Link>
             </div>
             <div className="hamburger-menu">
               <i

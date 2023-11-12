@@ -11,6 +11,7 @@ import Chairs from "./components/Categories-pages/Chairs";
 import SkinCare from "./components/Categories-pages/SkinCare";
 import ProductPage, { CartContext } from "./pages/ProductPage";
 import { useEffect, useState } from "react";
+import Login from "./pages/Login";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -48,6 +49,7 @@ function App() {
           <Route path="chairs" element={<Chairs />} />
           <Route path="skin-care" element={<SkinCare />} />
         </Route>
+        <Route path="login" element={<Login />} />
         <Route path="categories/product/:id" element={<ProductPage />} />
       </Routes>
     </CartContext.Provider>
